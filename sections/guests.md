@@ -145,7 +145,7 @@ Content-Type: application/xml; charset=utf-8
 ```
 #### Response
 ```xml
-<!-- 200 OK -->
+<!-- 201 Created -->
 <?xml version="1.0" encoding="UTF-8"?>
 <guest>
   <_id>50af6426bbfa805f760005ac</_id>
@@ -176,3 +176,46 @@ Content-Type: application/xml; charset=utf-8
     </guest-metadatum>
   </guest-metadata>
 </guest>
+```
+
+## Retrieve information about a guest
+With the `id` of a guest, you can details about him. We provide 2 optional
+parameters to pass as query string parameters:
+
+* `guest_metadata=true` will put the `guest_metadata` array in the object returned
+* `qrcode_url=true` will put the `qrcode_url` string in the object returned
+
+### JSON
+#### Request
+```
+GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+```
+#### Response
+```js
+// 200 OK
+{
+   "_id": "{id}",
+   "guest_category_id": "{guest_category_id}",
+   "first_name": "John",
+   "last_name": "Smith",
+   // [...]
+}
+```
+
+### XML
+#### Request
+```
+GET /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+```
+#### Response
+```xml
+<!-- 200 OK -->
+<?xml version="1.0" encoding="UTF-8"?>
+<guest>
+  <_id>50af6426bbfa805f760005ac</_id>
+  <guest-category-id>{guest_category_id}</guest-category-id>
+  <first-name>John</first-name>
+  <last-name>Smith</last-name>
+  <!-- [...] -->
+</guest>
+```
