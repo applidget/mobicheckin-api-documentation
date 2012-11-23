@@ -106,7 +106,6 @@ Content-Type: application/json; charset=utf-8
    "uid": "9vts5v3nqs",
    "updated_at": "2012-11-23T11:55:18Z",
    "created_at": "2012-11-23T11:55:18Z",
-   "access_privileges": [],
    "badge_url": null,
    "qrcode_url": null,
    "guest_metadata":
@@ -114,7 +113,10 @@ Content-Type: application/json; charset=utf-8
       { "name": "Has a dog",  "value": "Yes" },
       { "name": "Birth year", "value": "1960" }
    ],
-   ""
+   "access_privileges":
+   [
+     // Array of all access privileges
+   ]
 }
 ```
 
