@@ -165,7 +165,6 @@ PUT /api/v1/events/{event_id}/guest_categories/{id}.json?auth_token=YOUR_API_TOK
     // Fields to update
   }
 }
-
 ```
 #### Response
 ```js
