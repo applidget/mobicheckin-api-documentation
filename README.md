@@ -72,8 +72,7 @@ you'll need to specify a content-type request header.
 
 And for the XML version, you get the idead.
 
-API Return Codes
-----------------
+## API Return Codes
 
 The API uses the following HTTP status code in the response. Pay attention to them
 as they will tell you if an error occurred.
@@ -87,3 +86,70 @@ as they will tell you if an error occurred.
 * [406](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5) Not Acceptable - You might have forgotten the `.format` or the request `Content-Type`.
 * 422 Unprocessable Entity - Check your request body, the JSON or XML might be malformed.
 
+## Error messages
+
+If you don't receive a `2xx` HTTP status code in the response, it means that there
+is an error. You can look at the response body to get more insight about why
+your API call was not successful.
+
+### JSON
+If there is a general error, we'll send you this:
+```
+DELETE /api/v1/events.json
+```
+```js
+// 404 Not Found
+{
+  "error": "No API endpoint found at /api/v1/events and method DELETE"
+}
+```
+Now if there is an error with the payload provided to create (`POST`) or update
+(`PUT`) a resource, we'll detail the validation errors like this:
+```
+POST /api/v1/events/{event_id}.json
+
+{ "guest": { "first_name": "Cb" } }
+```
+```js
+// 422 Unprocessable Entity
+{
+  "errors":
+  {
+    "uid":
+    [
+      "is invalid",
+      "can't be blank"
+    ],
+    "guest_category_id":
+    [
+      "can't be blank"
+    ],
+    "last_name":
+    [
+      "should be set, or at least one other element of identity: email, company or uid."
+    ]
+  }
+}
+```
+
+### XML
+For the same exemple above, you will have the following responses:
+
+```xml
+<!-- 404 Not Found -->
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+  <error>No API endpoint found at /api/v1/events and method DELETE</error>
+</errors>
+```
+
+```xml
+<!-- 422 Unprocessable Entity -->
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+  <error>Guest Uid is invalid</error>
+  <error>Guest Uid can't be blank</error>
+  <error>Guest Category can't be blank</error>
+  <error>Last Name should be set, or at least one other element of identity: email, company or uid.</error>
+</errors>
+```
