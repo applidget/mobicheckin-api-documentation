@@ -189,6 +189,8 @@ parameters to pass as query string parameters:
 #### Request
 ```
 GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&qrcode_url=true
+GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&guest_metadata=true
 ```
 #### Response
 ```js
@@ -206,16 +208,56 @@ GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 #### Request
 ```
 GET /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+GET /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN&qrcode_url=true
+GET /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN&guest_metadata=true
 ```
 #### Response
 ```xml
 <!-- 200 OK -->
 <?xml version="1.0" encoding="UTF-8"?>
 <guest>
-  <_id>50af6426bbfa805f760005ac</_id>
+  <_id>{id}</_id>
   <guest-category-id>{guest_category_id}</guest-category-id>
   <first-name>John</first-name>
   <last-name>Smith</last-name>
   <!-- [...] -->
 </guest>
+```
+
+## Update a guest
+You can add complementary information, update or delete your guests fields. Be
+careful that these modifications are done in place, not concatenated to existing
+fields. For instance, if you provide a `guest_metadata` array in your request,
+they won't be appended to existing entries in the guest, but will replace them.
+
+### JSON
+#### Request
+```
+PUT /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+```
+```js
+{
+  "guest": {
+    // Fields to update
+  }
+}
+```
+### Response
+```js
+// 204 No Content
+```
+
+### XML
+#### Request
+```
+PUT /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+```
+```xml
+<guest>
+  <!-- Fields to update -->
+</guest>
+```
+### Response
+```xml
+<!-- 204 No Content -->
 ```
