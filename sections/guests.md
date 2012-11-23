@@ -36,10 +36,10 @@ GET /api/v1/events/{event_id}/guests.xml?page=1&auth_token=YOUR_API_TOKEN
 <?xml version="1.0" encoding="UTF-8"?>
 <guests type="array">
   <guest>
-    [...]
+    <!-- [...] -->
   </guest>
   <guest>
-    [...]
+    <!-- [...] -->
   </guest>
 </guest>
 ```
@@ -75,8 +75,14 @@ Content-Type: application/json; charset=utf-8
 
     // You can pass any other information abotu the guest in this hash.
     "guest_metadata": [
-      { "name": "Has a dog", "value": "Yes" },
+      { "name": "Has a dog",  "value": "Yes" },
       { "name": "Birth year", "value": "1960" }
+    ]
+
+    // You can pass an array of access privileges for specific check-in points
+    "access_privileges": [
+      { "access_once": true,  "accesspoint_id": "{workshop_foo_id}" },
+      { "access_once": false, "accesspoint_id": "{vip_room_id}" },
     ]
   }
 }
@@ -107,7 +113,8 @@ Content-Type: application/json; charset=utf-8
    [
       { "name": "Has a dog",  "value": "Yes" },
       { "name": "Birth year", "value": "1960" }
-   ]
+   ],
+   ""
 }
 ```
 
@@ -144,6 +151,18 @@ Content-Type: application/xml; charset=utf-8
       <value>1960</value>
     </guest-metadatum>
   </guest-metadata>
+
+  <!-- You can pass an array of access privileges if the guest can access specific check-in points -->
+  <access-privileges type="array">
+    <access-privilege>
+      <access-once type="boolean">true</access-once>
+      <accesspoint-id>{workshop_foo_id}</accesspoint-id>
+    </access-privilege>
+    <access-privilege>
+      <access-once type="boolean">false</access-once>
+      <accesspoint-id>{vip_room_id}</accesspoint-id>
+    </access-privilege>
+  </access-privileges>
 </guest>
 ```
 #### Response
@@ -167,7 +186,14 @@ Content-Type: application/xml; charset=utf-8
   <uid>9vts5v3nqs</uid>
   <created-at type="datetime">2012-11-23T11:55:18Z</created-at>
   <updated-at type="datetime">2012-11-23T11:55:18Z</updated-at>
-  <access-privileges type="array"/>
+  <access-privileges type="array">
+    <access-privilege>
+      <!-- [...] -->
+    <access-privilege>
+    </access-privilege>
+      <!-- [...] -->
+    </access-privilege>
+  </access-privileges>
   <guest-metadata type="array">
     <guest-metadatum>
       <name>Has a dog</name>
