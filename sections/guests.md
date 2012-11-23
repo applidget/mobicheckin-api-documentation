@@ -5,10 +5,11 @@
 MobiCheckin provides a paginaged API to retrieve the list of guests of your event.
 
 ### JSON
+#### Request
 ```
 GET /api/v1/events/{event_id}/guests.json?page=1&auth_token=YOUR_API_TOKEN
 ```
-
+#### Response
 ```js
 // 200 OK
 [
@@ -22,10 +23,11 @@ GET /api/v1/events/{event_id}/guests.json?page=1&auth_token=YOUR_API_TOKEN
 ```
 
 ### XML
+#### Request
 ```
 GET /api/v1/events/{event_id}/guests.xml?page=1&auth_token=YOUR_API_TOKEN
 ```
-
+#### Response
 ```xml
 <!-- 200 OK -->
 <?xml version="1.0" encoding="UTF-8"?>
@@ -46,12 +48,12 @@ You can increment the `page` query string parameter until you get an empty array
 You can add a new person to your event guest list.
 
 ### JSON
+#### Request
 ```
 POST /api/v1/{event_id}/guests.json?auth_token=YOUR_API_TOKEN
 Content-Type: application/json; charset=utf-8
 ```
 ```js
-// Request body
 {
   "guest": {
     "guest_category_id": "{guest_category_id}",
@@ -76,6 +78,7 @@ Content-Type: application/json; charset=utf-8
   }
 }
 ```
+#### Response
 ```js
 // 201 Created
 {
