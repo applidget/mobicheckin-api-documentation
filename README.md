@@ -78,9 +78,9 @@ API Return Codes
 The API uses the following HTTP status code in the response. Pay attention to them
 as they will tell you if an error occurred.
 
-* [200](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1) OK - For any `GET` or `DELETE` method which succeds.
+* [200](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1) OK - For any `GET` method which succeds.
 * [201](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.2) Created - For any `POST` method which succeds.
-* [204](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.5) No Content - For any `PUT` method which succeds.
+* [204](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.5) No Content - For any `PUT` or `DELETE` method which succeds.
 * [400](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1) Bad Request - Check your request body.
 * [403](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4) Forbidden - You might have forgotten the `auth_token`.
 * [404](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5) Not Found - The resource does not exist.

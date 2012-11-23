@@ -14,10 +14,10 @@ GET /api/v1/events/{event_id}/guests.json?page=1&auth_token=YOUR_API_TOKEN
 // 200 OK
 [
   {
-    // [...]
+    // the first guest
   },
   {
-    // [...]
+    // the second guest
   }
 ]
 ```
@@ -256,6 +256,29 @@ PUT /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
 <guest>
   <!-- Fields to update -->
 </guest>
+```
+### Response
+```xml
+<!-- 204 No Content -->
+```
+
+## Delete a guest
+You can delete guests (which is irreversible).
+
+### JSON
+#### Request
+```
+DELETE /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+```
+### Response
+```js
+// 204 No Content
+```
+
+### XML
+#### Request
+```
+PUT /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
 ```
 ### Response
 ```xml
