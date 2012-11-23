@@ -278,7 +278,7 @@ DELETE /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 ### XML
 #### Request
 ```
-PUT /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+DELETE /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
 ```
 ### Response
 ```xml
