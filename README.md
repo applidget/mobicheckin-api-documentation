@@ -33,7 +33,7 @@ Then you just need to append the `auth_token` as a query parameter of the URL.
 For instance, you can retrieve a JSON array of all the events you manage by
 issuing the following request:
 
-    GET /api/v1/events.json?auth_token=YOUR_APP_TOKEN
+    GET /api/v1/events.json?auth_token=YOUR_API_TOKEN
 
 ## Format
 
@@ -42,7 +42,7 @@ prefer by simply appending `.xml` or `.json` at the end of the resource URL
 you query.
 
     Request
-      GET /api/v1/events.json?auth_token=YOUR_APP_TOKEN
+      GET /api/v1/events.json?auth_token=YOUR_API_TOKEN
 
     Response
       HTTP/1.1 200 OK
@@ -51,7 +51,7 @@ you query.
 And for the XML version:
 
     Request
-      GET /api/v1/events.xml?auth_token=YOUR_APP_TOKEN
+      GET /api/v1/events.xml?auth_token=YOUR_API_TOKEN
 
     Response
       HTTP/1.1 200 OK
@@ -63,7 +63,7 @@ When you want to write some data to the API with `POST` (creation) or `PUT` (upd
 you'll need to specify a content-type request header.
 
     Request
-      POST /api/v1/events/{event_id}/guests.json?auth_token=YOUR_APP_TOKEN
+      POST /api/v1/events/{event_id}/guests.json?auth_token=YOUR_API_TOKEN
       Content-Type: application/json; charset=utf-8
 
     Response
@@ -85,5 +85,5 @@ as they will tell you if an error occurred.
 * [403](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4) Forbidden - You might have forgotten the `auth_token`.
 * [404](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5) Not Found - The resource does not exist.
 * [406](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5) Not Acceptable - You might have forgotten the `.format` or the request `Content-Type`.
-* 422 Not Acceptable - Check your request body.
+* 422 Unprocessable Entity - Check your request body, the JSON or XML might be malformed.
 
