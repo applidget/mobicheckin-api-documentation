@@ -14,7 +14,7 @@ the API by installing [JSON View](https://addons.mozilla.org/fr/firefox/addon/js
 ## API Endpoints
 
 * Events (coming soon)
-* [Guests](https://github.com/applidget/mobicheckin-api-documentation/sections/guests.md)
+* [Guests](https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/guests.md)
 * Guest Categories (coming soon)
 * Check-in Points (coming soon)
 * Check-ins (comin soon)
