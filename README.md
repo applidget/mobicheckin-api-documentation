@@ -13,6 +13,9 @@ the API by installing [JSON View](https://addons.mozilla.org/fr/firefox/addon/js
 
 ## API Endpoints
 
+If you want a summary of all the endpoints method served by MobiCheckin, you
+can look at the [MobiCheckin API Overview](https://app.mobicheckin.com/api#endpoints).
+
 * [Events] (https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/events.md)
 * [Guests](https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/guests.md)
 * Guest Categories (coming soon)

@@ -44,7 +44,7 @@ GET /api/v1/events.xml?auth_token=YOUR_API_TOKEN
 ### JSON
 #### Request
 ```
-PUT /api/v1/events/{event_id}.json?auth_token=YOUR_API_TOKEN
+GET /api/v1/events/{event_id}.json?auth_token=YOUR_API_TOKEN
 ```
 #### Response
 ```js
@@ -68,7 +68,7 @@ PUT /api/v1/events/{event_id}.json?auth_token=YOUR_API_TOKEN
 ### XML
 #### Request
 ```
-PUT /api/v1/events/{event_id}.xml?auth_token=YOUR_API_TOKEN
+GET /api/v1/events/{event_id}.xml?auth_token=YOUR_API_TOKEN
 ```
 #### Response
 ```xml
@@ -111,7 +111,7 @@ PUT /api/v1/events/{event_id}.json?auth_token=YOUR_API_TOKEN
 ### XML
 #### Request
 ```
-GET /api/v1/events/{event_id}.xml?auth_token=YOUR_API_TOKEN
+PUT /api/v1/events/{event_id}.xml?auth_token=YOUR_API_TOKEN
 ```
 ```xml
 <event>
