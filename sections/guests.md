@@ -107,3 +107,72 @@ Content-Type: application/json; charset=utf-8
    ]
 }
 ```
+
+### XML
+#### Request
+```
+POST /api/v1/{event_id}/guests.xml?auth_token=YOUR_API_TOKEN
+Content-Type: application/xml; charset=utf-8
+```
+```xml
+<guest>
+  <guest-category-id>{guest_category_id}</guest-category-id>
+  <email>john.smith@acme.org</email>
+  <first-name>John</first-name>
+  <last-name>Smith</last-name>
+  <company-name>Acme Inc.</company-name>
+  <position>CEO</position>
+  <phone-number>001122334455</phone-number>
+
+  <!-- Use this field if you want to choose your owns ids for your guests. -->
+  <uid>9vts5v3nqs</uid>
+
+  <!-- Use this field if you want a message that appear on the iOS device when the guest is checked-in. -->
+  <message>Vegan lunch</message>
+
+  <!-- You can pass any other information abotu the guest in this hash. -->
+  <guest-metadata type="array">
+    <guest-metadatum>
+      <name>Has a dog</name>
+      <value>Yes</value>
+    </guest-metadatum>
+    <guest-metadatum>
+      <name>Birth year</name>
+      <value>1960</value>
+    </guest-metadatum>
+  </guest-metadata>
+</guest>
+```
+#### Response
+```xml
+<!-- 200 OK -->
+<?xml version="1.0" encoding="UTF-8"?>
+<guest>
+  <_id>50af6426bbfa805f760005ac</_id>
+  <badge-completed type="boolean">false</badge-completed>
+  <badge-url></badge-url>
+  <company-name>Acme Inc.</company-name>
+  <email>john.smith@acme.org</email>
+  <event-id>{event_id}</event-id>
+  <first-name>John</first-name>
+  <guest-category-id>{guest_category_id}</guest-category-id>
+  <last-name>Smith</last-name>
+  <message>Vegan lunch</message>
+  <phone-number>001122334455</phone-number>
+  <position>CEO</position>
+  <rsvp-status>not_replied</rsvp-status>
+  <uid>9vts5v3nqs</uid>
+  <created-at type="datetime">2012-11-23T11:55:18Z</created-at>
+  <updated-at type="datetime">2012-11-23T11:55:18Z</updated-at>
+  <access-privileges type="array"/>
+  <guest-metadata type="array">
+    <guest-metadatum>
+      <name>Has a dog</name>
+      <value>Yes</value>
+    </guest-metadatum>
+    <guest-metadatum>
+      <name>Birth year</name>
+      <value>1960</value>
+    </guest-metadatum>
+  </guest-metadata>
+</guest>
