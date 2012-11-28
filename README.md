@@ -1,6 +1,6 @@
 # MobiCheckin API
 
-The MobiCheckin API is implemented as vanilla JSON and XML over HTTP using all
+The [MobiCheckin](http://www.mobicheckin.com) API is implemented as vanilla JSON and XML over HTTP using all
 four verbs (GET/POST/PUT/DELETE). Every resource, like Event, Guest, or Check-in,
 has their own URL and are manipulated in isolation. In other words, we've tried
 to make the API follow the REST principles.
@@ -9,6 +9,8 @@ You can explore the view part of the API (everything that's fetched with GET)
 through a regular browser. Using Firefox for this is particularly nice as it has
 a good, simple XML renderer. You can also get a nice view of the JSON version of
 the API by installing [JSON View](https://addons.mozilla.org/fr/firefox/addon/jsonview/).
+
+We dogfood this API as it is used by our [iPad guest list app](https://itunes.apple.com/app/mobicheckin/id510125877?mt=8).
 
 
 ## API Endpoints
