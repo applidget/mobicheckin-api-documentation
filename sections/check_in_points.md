@@ -4,7 +4,7 @@ A check-in point is a place where you will check-in
 [guests](https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/guests.md).
 It can be physical (Entrance, Exit, VIP Room) or represent an activity (Workshop, Conference, ...).
 
-## Retrieve the list of guest categories
+## Retrieve the list of Check-in points
 
 ### JSON
 #### Request
