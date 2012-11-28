@@ -106,6 +106,7 @@ GET /api/v1/events/{event_id}.xml?auth_token=YOUR_API_TOKEN
 #### Request
 ```
 PUT /api/v1/events/{event_id}.json?auth_token=YOUR_API_TOKEN
+Content-Type: application/json; charset=utf-8
 ```
 ```js
 {
@@ -132,6 +133,7 @@ PUT /api/v1/events/{event_id}.json?auth_token=YOUR_API_TOKEN
 #### Request
 ```
 PUT /api/v1/events/{event_id}.xml?auth_token=YOUR_API_TOKEN
+Content-Type: application/xml; charset=utf-8
 ```
 ```xml
 <event>

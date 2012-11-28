@@ -263,6 +263,7 @@ they won't be appended to existing entries in the guest, but will replace them.
 #### Request
 ```
 PUT /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+Content-Type: application/json; charset=utf-8
 ```
 ```js
 {
@@ -278,6 +279,7 @@ PUT /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 #### Request
 ```
 PUT /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+Content-Type: application/xml; charset=utf-8
 ```
 ```xml
 <guest>

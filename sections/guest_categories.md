@@ -156,6 +156,7 @@ Content-Type: application/xml; charset=utf-8
 #### Request
 ```
 PUT /api/v1/events/{event_id}/guest_categories/{id}.json?auth_token=YOUR_API_TOKEN
+Content-Type: application/json; charset=utf-8
 ```
 ```js
 {
@@ -171,6 +172,7 @@ PUT /api/v1/events/{event_id}/guest_categories/{id}.json?auth_token=YOUR_API_TOK
 #### Request
 ```
 PUT /api/v1/events/{event_id}/guest_categories/{id}.xml?auth_token=YOUR_API_TOKEN
+Content-Type: application/xml; charset=utf-8
 ```
 ```xml
 <guest-category>
