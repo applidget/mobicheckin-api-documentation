@@ -3,8 +3,8 @@
 ## Retrieve the list of guests
 
 MobiCheckin provides a paginaged API to retrieve the list of guests of your event.
-Starts at `page=1`.
-If you want to know how many guests registered to your events, you should
+Starts at `page=1`. Paginate every 20 guests.
+If you want to know how many guests registered to your event, you should
 query `GET /api/v1/events/{id}.format` and look at the property `guest_count`.
 
 ### JSON
