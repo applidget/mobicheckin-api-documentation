@@ -58,33 +58,31 @@ Content-Type: application/json; charset=utf-8
 ```
 ```js
 {
-  "guest": {
-    "guest_category_id": "{guest_category_id}",
-    "email":             "john.smith@acme.org",
-    "first_name":        "John",
-    "last_name":         "Smith",
-    "company_name":      "Acme Inc.",
-    "position":          "CEO",
-    "phone_number":      "001122334455",
+  "guest_category_id": "{guest_category_id}",
+  "email":             "john.smith@acme.org",
+  "first_name":        "John",
+  "last_name":         "Smith",
+  "company_name":      "Acme Inc.",
+  "position":          "CEO",
+  "phone_number":      "001122334455",
 
-    // Use this field if you want to choose your owns ids for your guests.
-    "uid": {your_custom_id},
+  // Use this field if you want to choose your owns ids for your guests.
+  "uid": {your_custom_id},
 
-    // Use this field if you want a message that appear on the iOS device when the guest is checked-in.
-    "message": "Vegan lunch",
+  // Use this field if you want a message that appear on the iOS device when the guest is checked-in.
+  "message": "Vegan lunch",
 
-    // You can pass any other information abotu the guest in this hash.
-    "guest_metadata": [
-      { "name": "Has a dog",  "value": "Yes" },
-      { "name": "Birth year", "value": "1960" }
-    ]
+  // You can pass any other information abotu the guest in this hash.
+  "guest_metadata": [
+    { "name": "Has a dog",  "value": "Yes" },
+    { "name": "Birth year", "value": "1960" }
+  ]
 
-    // You can pass an array of access privileges for specific check-in points
-    "access_privileges": [
-      { "access_once": true,  "accesspoint_id": "{workshop_foo_id}" },
-      { "access_once": false, "accesspoint_id": "{vip_room_id}" },
-    ]
-  }
+  // You can pass an array of access privileges for specific check-in points
+  "access_privileges": [
+    { "access_once": true,  "accesspoint_id": "{workshop_foo_id}" },
+    { "access_once": false, "accesspoint_id": "{vip_room_id}" },
+  ]
 }
 ```
 #### Response
@@ -268,9 +266,7 @@ PUT /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 ```
 ```js
 {
-  "guest": {
-    // Fields to update
-  }
+  // Fields to update (View the POST request for a complete list of fields)
 }
 ```
 ### Response
@@ -285,7 +281,7 @@ PUT /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
 ```
 ```xml
 <guest>
-  <!-- Fields to update -->
+  <!-- Fields to update (View the POST request for a complete list of fields) -->
 </guest>
 ```
 ### Response
