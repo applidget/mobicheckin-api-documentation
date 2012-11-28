@@ -119,16 +119,14 @@ Content-Type: application/json; charset=utf-8
 ```
 ```js
 {
-  "guest_category": {
-    // Fields
-  }
+  // Fields of the guest category to create (see GET request for a complete list)
 }
 ```
 #### Response
 ```js
 // 201 Created
 {
-   // Guest category
+   // Your newly created guest category as a JSON object
 }
 ```
 
@@ -140,7 +138,7 @@ Content-Type: application/xml; charset=utf-8
 ```
 ```xml
 <guest-category>
-  <!-- Fields -->
+  <!-- Fields of the guest category to create (see GET request for a complete list) -->
 </guest-category>
 ```
 #### Response
@@ -148,7 +146,7 @@ Content-Type: application/xml; charset=utf-8
 <!-- 201 Created -->
 <?xml version="1.0" encoding="UTF-8"?>
 <guest-category>
-  <!-- [...] -->
+  <!-- Your newly created guest category as a JSON object -->
 </guest>
 ```
 
@@ -161,9 +159,7 @@ PUT /api/v1/events/{event_id}/guest_categories/{id}.json?auth_token=YOUR_API_TOK
 ```
 ```js
 {
-  "guest_category": {
-    // Fields to update
-  }
+  // Fields of the guest category to update (see GET request for a complete list)
 }
 ```
 #### Response
@@ -178,7 +174,7 @@ PUT /api/v1/events/{event_id}/guest_categories/{id}.xml?auth_token=YOUR_API_TOKE
 ```
 ```xml
 <guest-category>
-  <!-- Fields to update -->
+  <!-- Fields of the guest category to update (see GET request for a complete list) -->
 </guest-category>
 ```
 #### Response
