@@ -108,10 +108,13 @@ DELETE /api/v1/events.json
 ```
 Now if there is an error with the payload provided to create (`POST`) or update
 (`PUT`) a resource, we'll detail the validation errors like this:
+
+#### HTTP Request
 ```
 POST /api/v1/events/{event_id}.json
+Content-Type: application/json; charset=utf-8
 
-{ "guest": { "first_name": "Cb" } }
+{ "first_name": "Sébastien", "company_name": "Applidget" }
 ```
 ```js
 // 422 Unprocessable Entity
