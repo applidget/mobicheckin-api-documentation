@@ -71,7 +71,8 @@ GET /api/v1/events/{event_id}.json?auth_token=YOUR_API_TOKEN
   "timezone": "Pacific Time (US &amp; Canada)",
   "title": "Fun with Flags Party",
   "reply_to_email": "sheldon@cooper.org",
-  "guest_count": 12
+  "guest_count": 12,
+  "check_in_count": 422
 }
 ```
 
@@ -97,6 +98,7 @@ GET /api/v1/events/{event_id}.xml?auth_token=YOUR_API_TOKEN
   <reply-to-email>sheldon@cooper.org</reply-to-email>
   <badge-complete-hook-url nil="true"/>
   <guest-count type="integer">12</guest-count>
+  <check-in-count type="integer">422</check-in-count>
 </event>
 ```
 
