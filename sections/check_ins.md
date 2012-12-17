@@ -3,7 +3,7 @@
 ## Retrieve the list of check-ins
 
 MobiCheckin provides a paginaged API to retrieve the list of check-ins of your event.
-Starts at `page=1`. Paginate every 20 check-ins.
+Starts at `page=1`. Paginate every 500 check-ins.
 If you want to know how many check-ins took place at your event, you should
 query `GET /api/v1/events/{id}.format` and look at the property `check_in_count`.
 
