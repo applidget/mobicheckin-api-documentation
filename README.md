@@ -23,6 +23,7 @@ can look at the [MobiCheckin API Overview](https://app.mobicheckin.com/api#endpo
 * [Guest Categories](https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/guest_categories.md)
 * [Check-in Points](https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/check_in_points.md)
 * [Check-ins](https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/check_ins.md)
+* [Signatures](https://github.com/applidget/mobicheckin-api-documentation/blob/master/sections/signatures.md)
 
 (Hint: Press `t` to enable the file finder and type out the endpoint you need!)
 
