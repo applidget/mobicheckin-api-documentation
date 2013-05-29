@@ -47,7 +47,7 @@ GET /api/v1/events/{event_id}/signatures.json?page=1&auth_token=YOUR_API_TOKEN
           "y2": "42.375",
           "y1": "65.75"
         },
-        /...
+        // ...
       ]
     }
 
@@ -151,7 +151,7 @@ Content-Type: application/json; charset=utf-8
         "y2": "42.375",
         "y1": "65.75"
       },
-      /...
+      // ...
     ]
   }
 }
@@ -262,12 +262,12 @@ Content-Type: application/xml; charset=utf-8
 ```xml
 <signatures type="array">
   <signature>
-    <accesspoint-id><{check_in_point_id}/accesspoint-id>
+    <accesspoint-id>{check_in_point_id}</accesspoint-id>
     <guest-uid>19j38293ju</guest-uid>
     <points><!-- [...] --></points>
   </signature>
   <signature>
-    <accesspoint-id><{check_in_point_id}/accesspoint-id>
+    <accesspoint-id>{check_in_point_id}</accesspoint-id>
     <guest-uid>ieuwh8w7wn</guest-uid>
     <points><!-- [...] --></points>
   </signature>
