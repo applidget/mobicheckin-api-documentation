@@ -217,9 +217,9 @@ parameters to pass as query string parameters:
 ### JSON
 #### Request
 ```
-GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
-GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&qrcode_url=true
-GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&guest_metadata=true
+GET /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+GET /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&qrcode_url=true
+GET /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&guest_metadata=true
 ```
 #### Response
 ```js
@@ -236,9 +236,9 @@ GET /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&guest_metadata
 ### XML
 #### Request
 ```
-GET /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
-GET /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN&qrcode_url=true
-GET /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN&guest_metadata=true
+GET /api/v1/events/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+GET /api/v1/events/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN&qrcode_url=true
+GET /api/v1/events/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN&guest_metadata=true
 ```
 #### Response
 ```xml
