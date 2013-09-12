@@ -53,7 +53,7 @@ You can add a new person to your event guest list.
 ### JSON
 #### Request
 ```
-POST /api/v1/{event_id}/guests.json?auth_token=YOUR_API_TOKEN
+POST /api/v1/events/{event_id}/guests.json?auth_token=YOUR_API_TOKEN
 Content-Type: application/json; charset=utf-8
 ```
 ```js
@@ -121,7 +121,7 @@ Content-Type: application/json; charset=utf-8
 ### XML
 #### Request
 ```
-POST /api/v1/{event_id}/guests.xml?auth_token=YOUR_API_TOKEN
+POST /api/v1/events/{event_id}/guests.xml?auth_token=YOUR_API_TOKEN
 Content-Type: application/xml; charset=utf-8
 ```
 ```xml
@@ -262,7 +262,7 @@ they won't be appended to existing entries in the guest, but will replace them.
 ### JSON
 #### Request
 ```
-PUT /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+PUT /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 Content-Type: application/json; charset=utf-8
 ```
 ```js
@@ -278,7 +278,7 @@ Content-Type: application/json; charset=utf-8
 ### XML
 #### Request
 ```
-PUT /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+PUT /api/v1/events/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
 Content-Type: application/xml; charset=utf-8
 ```
 ```xml
@@ -297,7 +297,7 @@ You can delete guests (which is irreversible).
 ### JSON
 #### Request
 ```
-DELETE /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
+DELETE /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 ```
 ### Response
 ```js
@@ -307,7 +307,7 @@ DELETE /api/v1/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 ### XML
 #### Request
 ```
-DELETE /api/v1/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
+DELETE /api/v1/events/{event_id}/guests/{id}.xml?auth_token=YOUR_API_TOKEN
 ```
 ### Response
 ```xml
