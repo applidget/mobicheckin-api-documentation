@@ -1,0 +1,29 @@
+{
+  "_id": "525bb99597927e18d8000043",
+  "accesspoint_id": "525baed297927e18d8000006",
+  "guest_uid": "8z8ma6lk04",
+  "event_id": "525baed297927e18d8000005",
+  "updated_at": "2013-10-14T09:29:57Z",
+  "created_at": "2013-10-14T09:29:57Z",
+  "access_stamp": "2013-10-14T09:29:57Z",
+  "access_status": 0,  // ACCESS_GRANTED = 0, GUEST_UNKNOWN = 1, ACCESS_DENIED  = 2, TOO_MANY_ACCESSES = 3
+  "guest": {
+    "_id": "525bb8aa97927e18d800000e",
+    "rsvp_status": "not_replied",
+    "_type": "Guest",
+    "guest_category_id": "525baed297927e18d8000007",
+    "email": "",
+    "uid": "8z8ma6lk04",
+    "first_name": "Sebastien",
+    "last_name": "Saunier",
+    "company_name": "Applidget",
+    "position": "Senior Software Engineer",
+    "phone_number": "",
+    "message": "",
+    "event_id": "525baed297927e18d8000005",
+    "updated_at": "2013-10-14T09:26:02Z",
+    "created_at": "2013-10-14T09:26:02Z",
+    "access_privileges": [],
+    "badge_url": null
+  }
+}
