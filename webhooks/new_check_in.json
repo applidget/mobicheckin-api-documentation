@@ -1,4 +1,3 @@
-// ACCESS_GRANTED = 0, GUEST_UNKNOWN = 1, ACCESS_DENIED  = 2, TOO_MANY_ACCESSES = 3
 {
   "_id": "525bb99597927e18d8000043",
   "accesspoint_id": "525baed297927e18d8000006",
@@ -8,6 +7,8 @@
   "created_at": "2013-10-14T09:29:57Z",
   "access_stamp": "2013-10-14T09:29:57Z",
   "access_status": 0,
+  "__access_status_comment": "ACCESS_GRANTED = 0, GUEST_UNKNOWN = 1, ACCESS_DENIED  = 2, TOO_MANY_ACCESSES = 3",
+  "_type": "AccessControl",
   "guest": {
     "_id": "525bb8aa97927e18d800000e",
     "rsvp_status": "not_replied",
