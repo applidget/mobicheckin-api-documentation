@@ -222,6 +222,7 @@ parameters to pass as query string parameters:
 GET /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN
 GET /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&qrcode_url=true
 GET /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&guest_metadata=true
+GET /api/v1/events/{event_id}/guests/{id}.json?auth_token=YOUR_API_TOKEN&files=true
 ```
 #### Response
 ```js
