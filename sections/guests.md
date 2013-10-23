@@ -213,6 +213,8 @@ parameters to pass as query string parameters:
 
 * `guest_metadata=true` will put the `guest_metadata` array in the object returned
 * `qrcode_url=true` will put the `qrcode_url` string in the object returned
+* `badges=true` will provide an array of the guest badges 
+* `files=true` will provide an array of attached files
 
 ### JSON
 #### Request
