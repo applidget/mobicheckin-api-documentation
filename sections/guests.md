@@ -72,7 +72,7 @@ Content-Type: application/json; charset=utf-8
   // Use this field if you want a message that appear on the iOS device when the guest is checked-in.
   "message": "Vegan lunch",
 
-  // You can pass any other information abotu the guest in this hash.
+  // You can pass any other information abotu the guest in this array.
   "guest_metadata": [
     { "name": "Has a dog",  "value": "Yes" },
     { "name": "Birth year", "value": "1960" }
