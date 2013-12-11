@@ -7,6 +7,14 @@ Starts at `page=1`. Paginate every 500 guests.
 If you want to know how many guests registered to your event, you should
 query `GET /api/v1/events/{id}.format` and look at the property `guest_count`.
 
+Optional query parameters are:
+
+1. `?uid=%s`: Search a guest by his/her uid. Will return an array of 0 or 1 guest.
+2. `?search=%s`: Full-text search in the guest list.
+3. `?category[]=%s&category[]=%s`: Filter by the given guest category ids.
+
+You can compound these filter parameters
+
 ### JSON
 #### Request
 ```
