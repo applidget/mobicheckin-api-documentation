@@ -87,7 +87,7 @@ Content-Type: application/json; charset=utf-8
   ]
 
   // You can pass an array of access privileges for specific check-in points
-  "access_privileges": [
+  "access_privileges-attributes": [
     { "access_once": true,  "accesspoint_id": "{workshop_foo_id}" },
     { "access_once": false, "accesspoint_id": "{vip_room_id}" },
   ]
@@ -161,7 +161,7 @@ Content-Type: application/xml; charset=utf-8
   </guest-metadata>
 
   <!-- You can pass an array of access privileges if the guest can access specific check-in points -->
-  <access-privileges type="array">
+  <access-privileges-attributes type="array">
     <access-privilege>
       <access-once type="boolean">true</access-once>
       <accesspoint-id>{workshop_foo_id}</accesspoint-id>
@@ -170,7 +170,7 @@ Content-Type: application/xml; charset=utf-8
       <access-once type="boolean">false</access-once>
       <accesspoint-id>{vip_room_id}</accesspoint-id>
     </access-privilege>
-  </access-privileges>
+  </access-privileges-attributes>
 </guest>
 ```
 #### Response
