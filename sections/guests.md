@@ -87,7 +87,7 @@ Content-Type: application/json; charset=utf-8
   ]
 
   // You can pass an array of access privileges for specific check-in points
-  "access_privileges-attributes": [
+  "access_privileges_attributes": [
     { "access_once": true,  "accesspoint_id": "{workshop_foo_id}" },
     { "access_once": false, "accesspoint_id": "{vip_room_id}" },
   ]
