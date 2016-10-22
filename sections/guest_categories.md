@@ -114,7 +114,7 @@ GET /api/v1/events/{event_id}/guest_categories/{id}.xml?auth_token=YOUR_API_TOKE
 ### JSON
 #### Request
 ```
-POST /api/v1/events/{event_id}/guest_category.json?auth_token=YOUR_API_TOKEN
+POST /api/v1/events/{event_id}/guest_categories.json?auth_token=YOUR_API_TOKEN
 Content-Type: application/json; charset=utf-8
 ```
 ```js
